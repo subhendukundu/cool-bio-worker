@@ -77,6 +77,7 @@ const style = `
         width: 150px;
         margin-top: 45px;
         border-radius: 9999px;
+        object-fit: contain;
     }
 
     .button {
@@ -100,7 +101,7 @@ const style = `
         border-radius: 10px;
         box-shadow: rgb(222 222 222 / 25%) 0px 10px 15px;
         color: rgb(248, 126, 15);
-        height: 60px;
+        height: 40px;
         background-color: transparent;
     }
 
@@ -169,7 +170,7 @@ const style = `
         }
 
         .button.outline {
-            height: 40px;
+            height: 30px;
         }
     }
 `
@@ -263,6 +264,7 @@ export default function bio({
 	links = [],
 }) {
 	return template({
+		title: `${name} | cool.bio`,
 		body: `
             <main class="wrapper">
                 <div class="content">

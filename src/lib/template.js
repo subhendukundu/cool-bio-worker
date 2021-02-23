@@ -1,10 +1,17 @@
-const app = ({ body, style, fonts = '', links = '' }) => `
+const app = ({
+	body = '',
+	title = 'cool.bio',
+	style,
+	fonts = '',
+	links = '',
+	script = '',
+}) => `
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width"/>
         <meta charSet="utf-8"/>
-        <title>cool.bio</title>
+        <title>${title}</title>
         <meta name="robots" content="index,follow"/>
         <meta name="googlebot" content="index,follow"/>
         <meta name="description" content="Be The Awesome Influencer You Are With cool.bio"/>
@@ -61,6 +68,7 @@ const app = ({ body, style, fonts = '', links = '' }) => `
                 document.body.appendChild(script);
                 }
             </script>
+            ${script}
         </body>
     </html>
 `
